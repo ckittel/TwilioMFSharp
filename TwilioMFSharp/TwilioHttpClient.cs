@@ -78,11 +78,13 @@ namespace TwilioMFSharp
         private static byte[] BuildHttpBodyBytes(DictionaryEntry[] values)
         {
             var dataString = string.Empty;
+            var first = true;
             if (values != null && values.Length > 0)
             {
                 foreach (var dataValue in values)
                 {
-                    dataString += string.Concat((string)dataValue.Key, '=', HttpUtils.UrlEncodeDataString((string)dataValue.Value));
+                    dataString += string.Concat((first ? string.Empty : "&"), (string)dataValue.Key, '=', HttpUtils.UrlEncodeDataString((string)dataValue.Value));
+                    first = false;
                 }
             }
             return Encoding.UTF8.GetBytes(dataString);

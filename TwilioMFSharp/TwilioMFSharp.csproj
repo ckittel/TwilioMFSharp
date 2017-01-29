@@ -33,6 +33,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DebuggerBrowsableState.cs" />
     <Compile Include="TwilioClient.cs" />
     <Compile Include="TwilioHttpClient.cs" />
     <Compile Include="HttpUtils.cs" />

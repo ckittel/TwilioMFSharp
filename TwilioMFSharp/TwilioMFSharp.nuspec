@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>TwilioMFSharp</id>
-    <version>0.7.0</version>
+    <version>0.7.2</version>
     <title>TwilioMFSharp</title>
     <authors>Chad Kittel</authors>
     <owners>ckittel</owners>
@@ -14,4 +14,16 @@
     <copyright>Copyright 2017</copyright>
     <tags>twilio netmf</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\TwilioMFSharp.dll" target="lib\netmf43" />
+    <file src="bin\Release\TwilioMFSharp.pdb" target="lib\netmf43" />
+    <file src="bin\Release\be\TwilioMFSharp.dll" target="lib\netmf43\be" />
+    <file src="bin\Release\be\TwilioMFSharp.pdb" target="lib\netmf43\be" />
+    <file src="bin\Release\be\TwilioMFSharp.pdbx" target="lib\netmf43\be" />
+    <file src="bin\Release\be\TwilioMFSharp.pe" target="lib\netmf43\be" />
+    <file src="bin\Release\le\TwilioMFSharp.dll" target="lib\netmf43\le" />
+    <file src="bin\Release\le\TwilioMFSharp.pdb" target="lib\netmf43\le" />
+    <file src="bin\Release\le\TwilioMFSharp.pdbx" target="lib\netmf43\le" />
+    <file src="bin\Release\le\TwilioMFSharp.pe" target="lib\netmf43\le" />
+  </files>
 </package>
