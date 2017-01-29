@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TwilioMFSharp</id>
+    <version>0.7.0</version>
+    <title>TwilioMFSharp</title>
+    <authors>Chad Kittel</authors>
+    <owners>ckittel</owners>
+    <licenseUrl>https://github.com/ckittel/TwilioMFSharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ckittel/TwilioMFSharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>API Client Libarary for Twilio targeting NetMF 4.3</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>twilio netmf</tags>
+  </metadata>
+</package>
