@@ -13,3 +13,6 @@ var msg = new SmsMessage
 var twilioClient = new TwilioClient("My Account ID", "My Auth ID");
 twilioClient.SendSmsMessage(msg);
 ```
+## Installing from NuGet
+
+`PM> Install-Package TwilioMFSharp`
