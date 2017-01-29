@@ -7,7 +7,7 @@ using Microsoft.SPOT;
 
 namespace TwilioMFSharp
 {
-    internal class TwilioHttpClient
+    internal class TwilioHttpClient : ITwilioHttpClient
     {
         private readonly string _authHeaderValue;
         private readonly int _defaultAsyncMsTimeout;

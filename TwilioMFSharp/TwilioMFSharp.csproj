@@ -34,6 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DebuggerBrowsableState.cs" />
+    <Compile Include="ITwilioClient.cs" />
+    <Compile Include="ITwilioHttpClient.cs" />
     <Compile Include="TwilioClient.cs" />
     <Compile Include="TwilioHttpClient.cs" />
     <Compile Include="HttpUtils.cs" />

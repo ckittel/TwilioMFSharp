@@ -3,9 +3,9 @@ using System.Collections;
 
 namespace TwilioMFSharp
 {
-    public class TwilioClient
+    public class TwilioClient : ITwilioClient
     {
-        private readonly TwilioHttpClient _httpClient;
+        private readonly ITwilioHttpClient _httpClient;
         private readonly Uri _messageUri;
 
         public TwilioClient(string accountId, string authId)
