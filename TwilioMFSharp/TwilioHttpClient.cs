@@ -10,13 +10,17 @@ namespace TwilioMFSharp
     internal class TwilioHttpClient
     {
         private readonly string _authHeaderValue;
-        private const int DefaultAsyncMsTimeout = 2000;
+        private readonly int _defaultAsyncMsTimeout;
         private const string HttpMethodPost = "POST";
 
-        public TwilioHttpClient(string accountId, string authId)
+        public TwilioHttpClient(string accountId, string authId, int asyncTimeout)
         {
             _authHeaderValue = "Basic " + Convert.ToBase64String(Encoding.UTF8.GetBytes(accountId + ":" + authId));
+            _defaultAsyncMsTimeout = asyncTimeout;
         }
+
+        public TwilioHttpClient(string accountId, string authId)
+            : this(accountId, authId, 2000) { }
 
         public HttpWebResponse MakeRequest(Uri uri, DictionaryEntry[] values, int asyncTimeout)
         {
@@ -50,7 +54,7 @@ namespace TwilioMFSharp
 
         public HttpWebResponse MakeRequest(Uri uri, DictionaryEntry[] values)
         {
-            return MakeRequest(uri, values, DefaultAsyncMsTimeout);
+            return MakeRequest(uri, values, _defaultAsyncMsTimeout);
         }
 
         private HttpWebRequest CreateHttpPostRequest(Uri uri, int asyncTimeout)
