@@ -1,5 +1,8 @@
 using System;
 using System.Collections;
+using System.IO;
+using System.Net;
+using Microsoft.SPOT;
 
 namespace TwilioMFSharp
 {
@@ -31,12 +34,28 @@ namespace TwilioMFSharp
             var response = requestTimeout >= 1
                 ? _httpClient.MakeRequest(_messageUri, dataValues, requestTimeout)
                 : _httpClient.MakeRequest(_messageUri, dataValues);
-            return true; // TODO return based on response.SatatusCode
+
+            if (response.StatusCode == HttpStatusCode.Created)
+            {
+                return true;
+            }
+
+            Debug.Print("SMS Request Failed\n" + ExtractResponse(response));
+            return false;
         }
 
         public bool SendSmsMessage(SmsMessage message)
         {
             return SendSmsMessage(message, -1);
+        }
+
+        private string ExtractResponse(HttpWebResponse response)
+        {
+            using (var stream = response.GetResponseStream())
+            using (var streamReader = new StreamReader(stream))
+            {
+                return streamReader.ReadToEnd();
+            }
         }
     }
 }

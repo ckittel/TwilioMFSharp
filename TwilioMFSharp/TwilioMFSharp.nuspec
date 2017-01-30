@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>TwilioMFSharp</id>
-    <version>0.7.4</version>
+    <version>0.7.5</version>
     <title>TwilioMFSharp</title>
     <authors>Chad Kittel</authors>
     <owners>ckittel</owners>
